@@ -55,7 +55,10 @@ section {
 }
 
 .section-one svg {
-  width: fit-content;
+  /* width: -moz-fit-content;
+  width: fit-content; */
+  display: table;
+  margin-right: auto;
 }
 
 .section-one img {
