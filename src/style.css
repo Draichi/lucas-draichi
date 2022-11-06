@@ -48,7 +48,7 @@ section {
 }
 
 .section-one svg {
-  height: fit-content;
+  width: fit-content;
   /* width: 100%; */
 }
 
