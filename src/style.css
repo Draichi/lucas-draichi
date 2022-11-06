@@ -28,7 +28,6 @@ body {
   height: 100%;
   position: fixed;
   top: 0;
-  /* z-index: 999; */
 }
 
 section {
@@ -43,27 +42,31 @@ section {
   justify-content: space-between;
 }
 
+.subheader-wrapper {
+  position: relative;
+  display: flex;
+  margin-top: 0.6875rem;
+}
+
 .subheader {
+  position: absolute;
+  bottom: 0;
   font-weight: 500;
 }
 
 .section-one svg {
   width: fit-content;
-  /* width: 100%; */
 }
 
 .section-one img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   max-width: 50vw;
   object-fit: contain;
+  z-index: 9;
 }
 
 @media (min-width: 400px) {
   .section-one svg {
     height: 100%;
-    /* width: 100%; */
   }
   .section-one img {
     display: block;
