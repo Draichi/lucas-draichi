@@ -34,7 +34,7 @@ const meshToonTexture = textureLoader.load(meshToonTextureImage);
 
 var geometry = new THREE.BoxGeometry();
 var material = new THREE.MeshToonMaterial({
-  color: "#C2D3D6",
+  color: "#CEE1F3",
   gradientMap: meshToonTexture,
 });
 var box = new THREE.Mesh(geometry, material);
