@@ -42,26 +42,36 @@ section {
   justify-content: space-between;
 }
 
-.subheader-wrapper {
+.section-one__subheader-wrapper {
   position: relative;
   display: flex;
   margin-top: 0.6875rem;
 }
 
-.subheader {
+.section-one__subheader {
   position: absolute;
   bottom: 0;
   font-weight: 500;
 }
 
-.section-one svg {
-  /* width: -moz-fit-content;
-  width: fit-content; */
-  display: table;
-  margin-right: auto;
+.section-one__heading-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
-.section-one img {
+.section-one__scroll-icon {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 5vw;
+}
+
+.section-one__heading {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 60vw;
+}
+
+.section-one__my-photo {
   max-width: 50vw;
   object-fit: contain;
   z-index: 9;
