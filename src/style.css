@@ -77,6 +77,10 @@ section {
   z-index: 9;
 }
 
+.section-one__subheader > span {
+  display: inline-block;
+}
+
 @media (min-width: 500px) {
   .section-one {
     flex-direction: row;
