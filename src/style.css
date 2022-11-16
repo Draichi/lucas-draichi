@@ -1,7 +1,6 @@
 :root {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  line-height: 24px;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -69,6 +68,7 @@ section {
   width: -moz-fit-content;
   width: fit-content;
   max-width: 60vw;
+  max-height: 65vh;
 }
 
 .section-one__my-photo {
@@ -77,12 +77,46 @@ section {
   z-index: 9;
 }
 
-@media (min-width: 400px) {
-  .section-one svg {
-    height: 100%;
+@media (min-width: 500px) {
+  .section-one {
+    flex-direction: row;
+    justify-content: flex-start;
   }
-  .section-one img {
-    display: block;
+  .section-one__my-photo {
+    position: absolute;
+    bottom: 0;
+    max-height: 93%;
+    min-height: 60%;
+    max-width: 100%;
+  }
+
+  .section-one__heading {
+    max-height: 100vh;
+    margin: 0.3125rem;
+  }
+
+  .section-one__subheader-wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-one__subheader {
+    position: relative;
+  }
+
+  .section-one__scroll-icon {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .section-one__subheader {
+    font-size: 1.8vw;
   }
 }
 
