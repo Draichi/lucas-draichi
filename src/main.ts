@@ -72,56 +72,56 @@ ScrollTrigger.defaults({
   scrub: true,
 });
 
-// let car_anim = gsap.timeline();
+const iPhoneAnimation = gsap.timeline();
 
-// car_anim.to(camera.position, {
-//   y: -5,
-//   scrollTrigger: {
-//     trigger: ".section-three",
+iPhoneAnimation.to(camera.position, {
+  y: -5,
+  scrollTrigger: {
+    trigger: ".section-three",
 
-//     endTrigger: ".section-five",
-//     end: "top bottom",
-//   },
-// });
+    endTrigger: ".section-five",
+    end: "top bottom",
+  },
+});
 
-// car_anim.to(camera.rotation, {
-//   y: 0.25,
-//   scrollTrigger: {
-//     trigger: ".section-four",
+iPhoneAnimation.to(camera.rotation, {
+  y: 0.25,
+  scrollTrigger: {
+    trigger: ".section-four",
 
-//     start: "top bottom",
-//     end: "top top",
-//   },
-// });
+    start: "top bottom",
+    end: "top top",
+  },
+});
 
-// car_anim.to(box.rotation, {
-//   z: -0.25,
-//   scrollTrigger: {
-//     trigger: ".section-four",
+iPhoneAnimation.to(box.rotation, {
+  z: -0.25,
+  scrollTrigger: {
+    trigger: ".section-four",
 
-//     start: "top bottom",
-//     end: "top top",
-//   },
-// });
+    start: "top bottom",
+    end: "top top",
+  },
+});
 
-// car_anim.to(box.position, {
-//   x: -25,
-//   y: 10,
-//   scrollTrigger: {
-//     trigger: ".section-five",
+iPhoneAnimation.to(box.position, {
+  x: -25,
+  y: 10,
+  scrollTrigger: {
+    trigger: ".section-five",
 
-//     start: "top bottom",
-//     end: "top top",
-//   },
-// });
+    start: "top bottom",
+    end: "top top",
+  },
+});
 
-// car_anim.to(box.rotation, {
-//   x: 25,
-//   y: 10,
-//   scrollTrigger: {
-//     trigger: ".section-five",
+iPhoneAnimation.to(box.rotation, {
+  x: 25,
+  y: 10,
+  scrollTrigger: {
+    trigger: ".section-five",
 
-//     start: "top bottom",
-//     end: "top top",
-//   },
-// });
+    start: "top bottom",
+    end: "top top",
+  },
+});

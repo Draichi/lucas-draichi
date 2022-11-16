@@ -4,8 +4,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const heroAnimations = gsap.timeline({
-  yoyo: true,
-  repeat: -1,
   defaults: {
     ease: "back.inOut(1.7)",
     duration: 1,
@@ -16,7 +14,7 @@ const scrollAnimations = gsap.timeline({
   scrollTrigger: {
     trigger: ".section-one",
     start: "0%",
-    end: "20%",
+    end: "40%",
     scrub: true,
     markers: true,
   },
@@ -38,46 +36,45 @@ gsap.to(".section-one__scroll-icon > circle", {
   duration: 1,
 });
 
-// heroAnimations.fromTo(
-//   ".section-one__my-photo",
-//   {
-//     y: "100%",
-//     opacity: 0,
-//   },
-//   {
-//     y: 0,
-//     opacity: 1,
-//   },
-//   "<50%"
-// );
+heroAnimations.fromTo(
+  ".section-one__my-photo",
+  {
+    y: "100%",
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+  }
+);
 
-// heroAnimations.fromTo(
-//   "#heading",
-//   {
-//     x: "-100%",
-//     opacity: 0,
-//   },
-//   {
-//     x: 0,
-//     opacity: 1,
-//   },
-//   "<30%"
-// );
+heroAnimations.fromTo(
+  "#heading",
+  {
+    x: "-100%",
+    opacity: 0,
+  },
+  {
+    x: 0,
+    opacity: 1,
+  },
+  "<30%"
+);
 
-// heroAnimations.fromTo(
-//   ".section-one__subheader > span",
-//   {
-//     y: "100%",
-//     opacity: 0,
-//   },
-//   {
-//     opacity: 1,
-//     y: 0,
-//     stagger: 0.05,
-//     ease: "back.out(3)",
-//     duration: 3,
-//   }
-// );
+heroAnimations.fromTo(
+  ".section-one__subheader > span",
+  {
+    y: "100%",
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    stagger: 0.05,
+    ease: "back.out(3)",
+    duration: 3,
+  }
+);
 
 scrollAnimations.fromTo(
   ".section-one__my-photo",
@@ -111,4 +108,11 @@ scrollAnimations.fromTo(
     yPercent: -20,
     opacity: 0,
   }
+);
+
+scrollAnimations.fromTo(
+  ".section-one__scroll-icon",
+  { y: 0, opacity: 1 },
+  { y: "-20%", opacity: 0 },
+  "<20%"
 );
