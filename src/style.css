@@ -27,6 +27,10 @@
   outline: none;
 }
 
+.section {
+  position: relative;
+}
+
 h1 {
   font-weight: 700;
   font-size: 1.4563rem;

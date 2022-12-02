@@ -7,11 +7,16 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 //Variables for setup
 const canvas = document.getElementById("webgl-renderer") as HTMLCanvasElement;
 
+const sizes = {
+  width: window.innerWidth,
+  height: window.innerHeight,
+};
+
 //Create scene
 const scene = new THREE.Scene();
 
 const fov = 35;
-const aspect = window.innerWidth / window.innerHeight;
+const aspect = sizes.width / sizes.height;
 const near = 0.9;
 const far = 1000;
 
@@ -43,7 +48,7 @@ if (window.innerWidth <= 400) {
       modelScene.scale.set(2, 2, 2);
       modelScene.rotation.x = 2;
       modelScene.position.set(0.0, 2, 0.0);
-      // scene.add(modelScene);
+      scene.add(modelScene);
       camera.lookAt(modelScene.position);
     }
   );
@@ -56,40 +61,36 @@ const renderer = new THREE.WebGLRenderer({
   canvas,
 });
 
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 const light = new THREE.DirectionalLight("#fff", 1);
 light.position.set(0, -2, 0);
 
-const mesh2 = new THREE.Mesh(
-  new THREE.ConeGeometry(1, 2, 32),
-  new THREE.MeshBasicMaterial()
-);
+scene.add(light);
 
-mesh2.position.set(0, 5, 0);
-camera.lookAt(mesh2.position);
+/*
+ * Resize
+ */
+window.addEventListener("resize", () => {
+  sizes.width = window.innerWidth;
+  sizes.height = window.innerHeight;
 
-scene.add(light, mesh2);
-
-function onWindowResize() {
-  (camera.aspect = window.innerWidth), window.innerHeight;
+  camera.aspect = sizes.width / sizes.height;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-}
+
+  renderer.setSize(sizes.width, sizes.height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+});
 
 window.addEventListener("mousemove", (event) => {
   const { clientX } = event;
-  const { clientWidth } = canvas;
 
-  // camera.rotation.y = (clientX / clientWidth - 0.5) * -1;
   const modelScene =
     scene?.getObjectByName("laptop_computer_low_poly") ||
     ({} as THREE.Object3D);
-  // modelScene.rotation.y = (clientX / clientWidth - 0.5) * -0.3;
+  modelScene.rotation.y = (clientX / sizes.width - 0.5) * -0.3;
 });
-
-window.addEventListener("resize", onWindowResize);
 
 gsap.registerPlugin(ScrollTrigger);
 
