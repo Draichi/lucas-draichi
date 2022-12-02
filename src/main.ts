@@ -3,6 +3,7 @@ import "./hero";
 import * as THREE from "three";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import meshToonTextureImage from "/toonTexture.jpg";
 //Variables for setup
 
@@ -18,6 +19,33 @@ const far = 1000;
 
 //Camera setup
 const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+
+// Loader
+const gltfLoader = new GLTFLoader();
+
+if (window.innerWidth <= 400) {
+  gltfLoader.load(
+    "/3d-models/low_poly_mobile_phone/scene.gltf",
+    ({ scene: modelScene }) => {
+      modelScene.scale.set(2, 2, 2);
+      modelScene.rotation.x = 2;
+      modelScene.position.set(0.0, 7, 0.0);
+      scene.add(modelScene);
+      camera.lookAt(modelScene.position);
+    }
+  );
+} else {
+  gltfLoader.load(
+    "/3d-models/laptop_computer_low_poly/scene.gltf",
+    ({ scene: modelScene }) => {
+      modelScene.scale.set(2, 2, 2);
+      modelScene.rotation.x = 2;
+      modelScene.position.set(0.0, 2, 0.0);
+      scene.add(modelScene);
+      camera.lookAt(modelScene.position);
+    }
+  );
+}
 
 //Renderer
 const renderer = new THREE.WebGLRenderer({
@@ -45,10 +73,8 @@ light.position.set(0, -2, 0);
 box.scale.set(2, 2, 2);
 box.position.set(0.0, 2, 0.0);
 
-scene.add(box, light);
+scene.add(light);
 animate();
-
-camera.lookAt(box.position);
 
 function animate() {
   renderer.render(scene, camera);
