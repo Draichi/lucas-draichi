@@ -29,21 +29,40 @@
 
 .section {
   position: relative;
+  margin: 12px;
 }
 
 h1 {
   font-weight: 700;
-  font-size: 1.4563rem;
+  font-size: 1.8rem;
   letter-spacing: -0.025em;
 }
 
 h2 {
-  font-weight: 500;
-  font-size: 3.15rem;
+  font-weight: 600;
+  font-size: 3.5rem;
   line-height: 117.5%;
   letter-spacing: -0.025em;
-  margin: 0 1rem;
-  margin-top: 2.25rem;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  margin-top: 3.75rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+}
+
+li {
+  font-family: "Cormorant Garamond", serif;
+
+  list-style-type: none;
+  font-weight: 700;
+  font-size: 21.1455px;
+
+  text-transform: uppercase;
 }
 
 @media (min-width: 500px) {

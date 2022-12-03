@@ -28,15 +28,33 @@ const gltfLoader = new GLTFLoader();
 
 if (window.innerWidth <= 400) {
   gltfLoader.load(
-    "/3d-models/low_poly_mobile_phone/scene.gltf",
+    "/3d-models/iphone13/iphone13.glb",
     ({ scene: modelScene }) => {
-      modelScene.scale.set(3, 3, 3);
-      modelScene.rotation.x = -Math.PI * 1.25;
-      modelScene.position.set(0, 8, 0);
+      modelScene.name = "iphone";
+      modelScene.scale.set(0.2, 0.2, 0.2);
+      // modelScene.rotation.z = Math.PI * 1.5;
+      // modelScene.rotation.y = Math.PI * 1.5;
+      modelScene.position.set(0, 2, 0);
       scene.add(modelScene);
       camera.lookAt(modelScene.position);
-      camera.position.y = -9;
-      camera.position.x = -0.75;
+
+      modelScene.position.x = 1;
+      gsap.to(modelScene.position, {
+        x: -0.05,
+        duration: 1,
+        ease: "power1.easeOut",
+      });
+
+      gsap.to(modelScene.rotation, {
+        y: -1.5,
+        z: -1.5,
+        duration: 2,
+        delay: 1,
+        ease: "power1.easeOut",
+      });
+
+      // camera.position.y = -9;
+      // camera.position.x = -0.75;
     }
   );
 } else {
@@ -93,6 +111,13 @@ window.addEventListener("mousemove", (event) => {
 });
 
 gsap.registerPlugin(ScrollTrigger);
+
+// gsap.to(camera.rotation, {
+//   y: Math.PI * 0.05,
+//   duration: 2,
+//   delay: 1,
+//   ease: "power1.easeOut",
+// });
 
 ScrollTrigger.defaults({
   immediateRender: false,
