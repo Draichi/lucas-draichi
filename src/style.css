@@ -1,5 +1,5 @@
 :root {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", system-ui, sans-serif;
   font-size: 16px;
   font-weight: 400;
 
@@ -20,15 +20,15 @@
   box-sizing: border-box;
 }
 
-#webgl-renderer {
+/* #webgl-renderer {
   position: fixed;
   top: 0;
   left: 0;
   outline: none;
-}
+} */
 
-.section {
-  position: relative;
+section {
+  /* position: relative; */
   margin: 12px;
 }
 
@@ -55,6 +55,13 @@ h3 {
   text-transform: uppercase;
 }
 
+.works__list {
+  margin-top: 3.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+
 li {
   font-family: "Cormorant Garamond", serif;
 
@@ -73,13 +80,7 @@ li {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    color: #c7d0d6;
+    background-color: #242b32;
   }
 }
