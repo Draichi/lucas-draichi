@@ -37,14 +37,19 @@
     <section class="about">
       <h3 class="about__title">About</h3>
       <p class="about__subtitle">
-        I'm a software engineer since 2015, front-end developer and web
-        designer. Focused in performance, user experience and SEO.
+        Former IBM Web Builder. Software engineer since 2015, front-end
+        developer and web designer. Focused in user experience, performance and
+        SEO. Currently working at Talentify.
       </p>
-      <img
-        src="/profile-photo.png"
-        alt="a photo of me"
-        class="about__profile-photo"
-      />
+      <div class="about__profile-photo-wrapper">
+        <img
+          srcset="/profile-photo_186w.png 186w, /profile-photo_378w.png 378w"
+          sizes="(max-width: 500px) 186px, 378px"
+          src="/profile-photo_186w.png"
+          alt="a photo of me"
+          class="about__profile-photo"
+        />
+      </div>
     </section>
 
     <section class="contact">

@@ -29,16 +29,16 @@
 
 section {
   /* position: relative; */
-  margin: 12px;
+  margin: 0.75rem;
 }
 
-h1 {
+.above-the-fold__title {
   font-weight: 700;
   font-size: 1.8rem;
   letter-spacing: -0.025em;
 }
 
-h2 {
+.above-the-fold__subtitle {
   font-weight: 600;
   font-size: 3.5rem;
   line-height: 117.5%;
@@ -46,7 +46,7 @@ h2 {
   margin-top: 1.5rem;
 }
 
-h3 {
+.works__title {
   margin-top: 3.75rem;
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
@@ -62,14 +62,40 @@ h3 {
   gap: 0.9375rem;
 }
 
-li {
+.works__list-item {
   font-family: "Cormorant Garamond", serif;
-
   list-style-type: none;
   font-weight: 700;
   font-size: 21.1455px;
-
   text-transform: uppercase;
+}
+
+.about {
+  margin-top: 7rem;
+}
+.about__title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 1.176rem;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+}
+
+.about__subtitle {
+  margin-top: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.04em;
+}
+
+.about__profile-photo-wrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.about__profile-photo {
+  margin-top: 2.6875rem;
+  margin-right: 0.4375rem;
 }
 
 @media (min-width: 500px) {
