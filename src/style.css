@@ -163,4 +163,8 @@ button {
   button {
     color: #c7d0d6;
   }
+
+  .contact__contact-item-logo {
+    fill: #c7d0d6;
+  }
 }
