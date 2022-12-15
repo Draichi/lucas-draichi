@@ -139,6 +139,14 @@ button {
   list-style-type: none;
 }
 
+.contact__contact-item-pdf-weight {
+  display: block;
+  text-align: left;
+  color: #5e7082;
+  font-weight: 600;
+  font-size: 0.6rem;
+}
+
 @media (min-width: 500px) {
 }
 
