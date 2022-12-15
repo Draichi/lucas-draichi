@@ -14,6 +14,16 @@
   -webkit-text-size-adjust: 100%;
 }
 
+::-moz-selection {
+  color: #c7d0d6;
+  background: #242b32;
+}
+
+::selection {
+  color: #c7d0d6;
+  background: #242b32;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -147,6 +157,10 @@ button {
   font-size: 0.6rem;
 }
 
+.about-contact-wrapper__photo {
+  display: none;
+}
+
 @media (min-width: 500px) {
   section {
     margin: 1rem 2rem;
@@ -172,6 +186,36 @@ button {
   .works__list-item {
     font-size: 3.5481rem;
   }
+
+  .about-contact-wrapper {
+    display: flex;
+    margin-top: 11.875rem;
+  }
+
+  .about-contact-wrapper__photo {
+    display: block;
+  }
+
+  .about,
+  .contact {
+    margin: 0;
+  }
+
+  .about__profile-photo {
+    display: none;
+  }
+
+  .about__title {
+    font-size: 1.6875rem;
+  }
+
+  .texts {
+    margin: 0 5.625rem;
+  }
+
+  .contact {
+    margin-top: 10rem;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -181,6 +225,16 @@ button {
   :root {
     color: #c7d0d6;
     background-color: #242b32;
+  }
+
+  ::-moz-selection {
+    background: #c7d0d6;
+    color: #242b32;
+  }
+
+  ::selection {
+    background: #c7d0d6;
+    color: #242b32;
   }
 
   a,
