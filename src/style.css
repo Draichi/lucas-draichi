@@ -148,6 +148,30 @@ button {
 }
 
 @media (min-width: 500px) {
+  section {
+    margin: 1rem 2rem;
+  }
+
+  .above-the-fold__title {
+    font-size: 2rem;
+  }
+
+  .above-the-fold__subtitle {
+    font-size: 7.6344rem;
+    margin-right: 30%;
+  }
+
+  .above-the-fold__subtitle span {
+    display: block;
+  }
+
+  .works__title {
+    font-size: 1.6875rem;
+  }
+
+  .works__list-item {
+    font-size: 3.5481rem;
+  }
 }
 
 @media (min-width: 1400px) {
