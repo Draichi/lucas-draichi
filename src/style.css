@@ -32,6 +32,19 @@ section {
   margin: 0.75rem;
 }
 
+a {
+  color: #242b32;
+}
+
+button {
+  border: none;
+  background: inherit;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  color: #242b32;
+}
+
 .above-the-fold__title {
   font-weight: 700;
   font-size: 1.8rem;
@@ -66,7 +79,7 @@ section {
   font-family: "Cormorant Garamond", serif;
   list-style-type: none;
   font-weight: 700;
-  font-size: 21.1455px;
+  font-size: 1.3216rem;
   text-transform: uppercase;
 }
 
@@ -98,6 +111,34 @@ section {
   margin-right: 0.4375rem;
 }
 
+.contact {
+  margin-top: 5.5rem;
+  padding-bottom: 3.75rem;
+}
+
+.contact__title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 1.3022rem;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+}
+
+.contact__contact-list {
+  gap: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact__contact-item {
+  font-weight: 400;
+  font-size: 1.0128rem;
+  letter-spacing: 0.085em;
+  text-decoration-line: underline;
+  list-style-type: none;
+}
+
 @media (min-width: 500px) {
 }
 
@@ -108,5 +149,10 @@ section {
   :root {
     color: #c7d0d6;
     background-color: #242b32;
+  }
+
+  a,
+  button {
+    color: #c7d0d6;
   }
 }
