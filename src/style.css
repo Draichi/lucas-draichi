@@ -56,17 +56,53 @@ button {
 }
 
 .above-the-fold__title {
-  font-weight: 700;
-  font-size: 1.8rem;
-  letter-spacing: -0.025em;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: -0.05em;
 }
 
 .above-the-fold__subtitle {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 3.5rem;
   line-height: 117.5%;
   letter-spacing: -0.025em;
   margin-top: 1.5rem;
+}
+
+.above-the-fold__subtitle span {
+  overflow: hidden;
+  display: inline-block;
+  padding: 0 0.4rem;
+}
+
+.above-the-fold-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.above-the-fold__cta-1,
+.above-the-fold__cta-2 {
+  display: block;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  padding: 0.5rem 0;
+  min-width: 8rem;
+  text-align: center;
+  text-decoration-line: none;
+}
+
+.above-the-fold__cta-1 {
+  color: #c7d0d6;
+  background: #242b32;
+  border: 1px solid #242b32;
+}
+
+.above-the-fold__cta-2 {
+  border: 1px solid #242b32;
+  color: #242b32;
 }
 
 .works__title {
@@ -175,10 +211,6 @@ button {
     margin-right: 30%;
   }
 
-  .above-the-fold__subtitle span {
-    display: block;
-  }
-
   .works__title {
     font-size: 1.6875rem;
   }
@@ -189,7 +221,8 @@ button {
 
   .about-contact-wrapper {
     display: flex;
-    margin-top: 11.875rem;
+    margin-top: 13rem;
+    align-items: center;
   }
 
   .about-contact-wrapper__photo {
@@ -205,8 +238,14 @@ button {
     display: none;
   }
 
-  .about__title {
+  .about__title,
+  .contact__title {
     font-size: 1.6875rem;
+  }
+
+  .about__subtitle {
+    font-size: 1.3125rem;
+    line-height: 2rem;
   }
 
   .texts {
@@ -215,6 +254,14 @@ button {
 
   .contact {
     margin-top: 10rem;
+  }
+
+  .contact__contact-list {
+    margin-top: 1rem;
+  }
+
+  .contact__contact-item {
+    font-size: 1.3125rem;
   }
 }
 
