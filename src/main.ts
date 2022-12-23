@@ -89,7 +89,7 @@ aboveTheFoldTimeline.fromTo(
 );
 
 aboveTheFoldTimeline.fromTo(
-  ".above-the-fold-buttons a",
+  ".above-the-fold__buttons a",
   {
     y: "-100%",
     opacity: 0,

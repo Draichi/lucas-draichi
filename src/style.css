@@ -93,7 +93,7 @@ button {
   padding: 0 0.4rem;
 }
 
-.above-the-fold-buttons {
+.above-the-fold__buttons {
   display: flex;
   justify-content: space-evenly;
   margin-top: 2rem;
@@ -102,7 +102,7 @@ button {
 .above-the-fold__cta-1,
 .above-the-fold__cta-2 {
   display: block;
-  border-radius: 20px;
+  border-radius: 15px;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.015em;
@@ -220,13 +220,22 @@ button {
     margin: 1rem 2rem;
   }
 
+  .above-the-fold__container {
+    display: flex;
+    align-items: flex-end;
+  }
+
   .above-the-fold__title {
     font-size: 2rem;
   }
 
   .above-the-fold__subtitle {
     font-size: 7.6344rem;
-    margin-right: 30%;
+  }
+
+  .above-the-fold__buttons {
+    gap: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   .works__title {
@@ -304,6 +313,17 @@ button {
 
   a,
   button {
+    color: #c7d0d6;
+  }
+
+  .above-the-fold__cta-1 {
+    color: #242b32;
+    background: #c7d0d6;
+    border: 1px solid #c7d0d6;
+  }
+
+  .above-the-fold__cta-2 {
+    border: 1px solid #c7d0d6;
     color: #c7d0d6;
   }
 
