@@ -103,6 +103,19 @@ aboveTheFoldTimeline.fromTo(
 );
 
 aboveTheFoldTimeline.fromTo(
+  ".works",
+  {
+    y: "100%",
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+  },
+  "<70%"
+);
+
+aboveTheFoldTimeline.fromTo(
   ".navbar__title",
   {
     y: "-100%",
