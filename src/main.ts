@@ -174,3 +174,51 @@ ScrollTrigger.defaults({
   immediateRender: false,
   scrub: true,
 });
+
+if (window.innerWidth <= 500) {
+  const contactParallax = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".about-contact-wrapper",
+      start: "-30%",
+      scrub: true,
+    },
+  });
+  contactParallax.fromTo(
+    ".about__profile-photo",
+    {
+      x: 0,
+    },
+    {
+      x: "-100%",
+    }
+  );
+} else {
+  const contactParallax = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".about-contact-wrapper",
+      start: "-65%",
+      scrub: true,
+    },
+  });
+
+  contactParallax.fromTo(
+    ".about-contact-wrapper__photo",
+    {
+      y: 0,
+    },
+    {
+      y: "100%",
+    }
+  );
+
+  contactParallax.fromTo(
+    ".about",
+    {
+      y: 0,
+    },
+    {
+      y: "50%",
+    },
+    "<"
+  );
+}

@@ -303,7 +303,6 @@ button {
   .about-contact-wrapper {
     display: flex;
     margin-top: 13rem;
-    align-items: center;
   }
 
   .about-contact-wrapper__photo {
