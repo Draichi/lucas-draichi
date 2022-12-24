@@ -60,6 +60,11 @@ section {
   margin: 0.75rem;
 }
 
+nav {
+  padding: 0.75rem 1.25rem;
+  z-index: 99;
+}
+
 a {
   color: #242b32;
 }
@@ -73,10 +78,18 @@ button {
   color: #242b32;
 }
 
-.above-the-fold__title {
+.navbar {
+  background: #c7d0d6;
+}
+
+.navbar__title {
   font-weight: 500;
   font-size: 1rem;
   letter-spacing: -0.05em;
+}
+
+.navbar__items-wrapper {
+  display: none;
 }
 
 .above-the-fold__subtitle {
@@ -140,11 +153,26 @@ button {
 }
 
 .works__list-item {
-  font-family: "Cormorant Garamond", serif;
   list-style-type: none;
-  font-weight: 700;
   font-size: 1.3216rem;
   text-transform: uppercase;
+  overflow: hidden;
+  height: 25px;
+  position: relative;
+}
+
+.works__item-font-default,
+.works__item-font-variant {
+  display: block;
+  position: absolute;
+}
+
+.works__item-font-variant {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  opacity: 0;
+  transform: translateY(100%);
 }
 
 .about {
@@ -220,13 +248,34 @@ button {
     margin: 1rem 2rem;
   }
 
+  nav {
+    padding: 1rem 2.4rem;
+  }
+
   .above-the-fold__container {
     display: flex;
     align-items: flex-end;
   }
 
-  .above-the-fold__title {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+  }
+
+  .navbar__title {
     font-size: 2rem;
+  }
+
+  .navbar__items-wrapper {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .navbar__item {
+    text-decoration-line: none;
   }
 
   .above-the-fold__subtitle {
@@ -242,8 +291,13 @@ button {
     font-size: 1.6875rem;
   }
 
+  .works__list {
+    gap: 1.5rem;
+  }
+
   .works__list-item {
     font-size: 3.5481rem;
+    height: 70px;
   }
 
   .about-contact-wrapper {
@@ -314,6 +368,10 @@ button {
   a,
   button {
     color: #c7d0d6;
+  }
+
+  .navbar {
+    background: #242b32;
   }
 
   .above-the-fold__cta-1 {
