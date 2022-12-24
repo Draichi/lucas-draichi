@@ -149,7 +149,7 @@ button {
   margin-top: 3.375rem;
   display: flex;
   flex-direction: column;
-  gap: 0.9375rem;
+  gap: 1.6rem;
 }
 
 .works__list-item {
@@ -292,7 +292,7 @@ button {
   }
 
   .works__list {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .works__list-item {

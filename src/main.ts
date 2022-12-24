@@ -159,27 +159,54 @@ function hideFirstElementChild(item: Element) {
   });
 }
 
-worksItems.forEach((item) => {
-  item.addEventListener("mouseover", () => {
-    hideFirstElementChild(item);
-    showLastElementChild(item);
+function registerDesktopWorksMouseEffect() {
+  worksItems.forEach((item) => {
+    item.addEventListener("mouseover", () => {
+      hideFirstElementChild(item);
+      showLastElementChild(item);
+    });
+    item.addEventListener("mouseout", () => {
+      showFirstElementChild(item);
+      hideLastElementChild(item);
+    });
   });
-  item.addEventListener("mouseout", () => {
-    showFirstElementChild(item);
-    hideLastElementChild(item);
-  });
-});
+}
 
 ScrollTrigger.defaults({
   immediateRender: false,
   scrub: true,
 });
 
+function registerMobileWorksScrollEffect() {
+  const middleScreen = Math.round(window.innerHeight / 2);
+
+  let itemHightlighted: number | null = null;
+  window.addEventListener("scroll", () => {
+    worksItems.forEach((item, index) => {
+      const itemPosition = Math.round(item.getBoundingClientRect().top);
+      const isItemAboveMiddleScreen = itemPosition < middleScreen - 20;
+      const isItemBelowMiddleScreen = itemPosition > middleScreen + 20;
+
+      if (!isItemAboveMiddleScreen && !isItemBelowMiddleScreen) {
+        hideFirstElementChild(item);
+        showLastElementChild(item);
+        itemHightlighted = index;
+      } else if (itemHightlighted == index) {
+        showFirstElementChild(item);
+        hideLastElementChild(item);
+        itemHightlighted = null;
+      }
+    });
+  });
+}
+
 if (window.innerWidth <= 500) {
+  registerMobileWorksScrollEffect();
+
   const contactParallax = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-contact-wrapper",
-      start: "-30%",
+      start: "-100%",
       scrub: true,
     },
   });
@@ -193,6 +220,8 @@ if (window.innerWidth <= 500) {
     }
   );
 } else {
+  registerDesktopWorksMouseEffect();
+
   const contactParallax = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-contact-wrapper",
